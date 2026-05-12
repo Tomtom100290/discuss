@@ -29,18 +29,26 @@ export default function CardMessage({
     }
 
     return (
-        <div
-            key={m._id}
-            className={`flex flex-col rounded ${isOwn ? "items-end" : "items-start"}`}
-        >
-            {!isOwn && <p>{m.userName}</p>}
-            <p>{m.content}</p>
-            <p>{new Date(m.createdAt).toLocaleTimeString("fr-FR")}</p>
-            {isOwn && (
-                <button onClick={handleClick}>
-                    <FaTrash />
-                </button>
+        <div className={`flex flex-col gap-1 max-w-xs ${isOwn ? "items-end ml-auto" : "items-start mr-auto"}`}>
+            {!isOwn && (
+                <p className="text-xs font-semibold text-gray-500 px-1">{m.userName}</p>
             )}
+            <div className={`px-4 py-2 rounded-2xl text-sm shadow-sm ${isOwn ? "bg-blue-500 text-white rounded-br-sm" : "bg-white text-gray-800 border border-gray-200 rounded-bl-sm"}`}>
+                <p>{m.content}</p>
+            </div>
+            <div className={`flex items-center gap-2 px-1 ${isOwn ? "flex-row-reverse" : "flex-row"}`}>
+                <p className="text-xs text-gray-400">
+                    {new Date(m.createdAt).toLocaleTimeString("fr-FR")}
+                </p>
+                {isOwn && (
+                    <button
+                        onClick={handleClick}
+                        className="text-gray-300 hover:text-red-400 transition-colors"
+                    >
+                        <FaTrash size={10} />
+                    </button>
+                )}
+            </div>
         </div>
     );
 }
