@@ -11,7 +11,7 @@ export default async function ChatPage() {
         <div className="flex h-screen bg-gray-50">
 
             {/* Sidebar */}
-            <aside className="w-64 bg-white border-r border-gray-200 flex flex-col items-center py-6 px-4 gap-6 shadow-sm">
+            <aside className="w-64 bg-gray-300 border-r border-gray-200 flex flex-col items-center py-6 px-4 gap-6 shadow-sm">
 
                 {/* Logo */}
                 <div className="flex flex-col items-center gap-2">
