@@ -11,5 +11,12 @@ export default function LogoutButton() {
         router.push("/login");
     }
 
-    return <button onClick={handleSignOut}>Se deconnecter</button>;
+    return (
+        <button
+            onClick={handleSignOut}
+            className="text-sm font-medium text-gray-400 hover:text-red-400 transition-colors px-3 py-1.5 rounded-xl hover:bg-red-50"
+        >
+            Se déconnecter
+        </button>
+    );
 }
