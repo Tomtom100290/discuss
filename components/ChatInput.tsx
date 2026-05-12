@@ -25,8 +25,10 @@ export default function ChatInput() {
             <input
                 type="text"
                 placeholder="Votre Message..."
+                maxLength={200}
                 onChange={(e) => setContent(e.target.value)}
             />
+            <span>{content.length}/200</span>
             <button type="submit">Envoyer</button>
         </form>
     );
