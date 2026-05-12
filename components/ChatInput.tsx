@@ -92,7 +92,7 @@ export default function ChatInput() {
     return (
         <div className="w-full max-w-2xl mx-auto p-4">
             <form onSubmit={handleSubmit} className="flex flex-col gap-2">
-                <div className={`flex items-center gap-2 bg-white border rounded-2xl px-4 py-2 shadow-sm transition-all focus-within:ring-2 ${isOverLimit ? "border-red-400 focus-within:ring-red-400" : "border-gray-400 focus-within:ring-blue-500 focus-within:border-transparent"}`}>
+                <div className={`flex items-center gap-2 bg-white border-gray-400 border rounded-2xl px-4 py-2 shadow-sm transition-all focus-within:ring-2 ${isOverLimit ? "border-red-400 focus-within:ring-red-400" : "border-gray-400 focus-within:ring-blue-500 focus-within:border-transparent"}`}>
                     <input
                         type="text"
                         placeholder="Votre message..."
